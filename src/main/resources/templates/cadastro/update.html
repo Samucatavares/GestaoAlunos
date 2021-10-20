@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron mb-0">
+                <h1 class="display-4">Novas informações do Aluno</h1>
+            </div>
+
+            <form action="/cadastro/novo" method="POST">
+                <div>
+                    <label for="nomeAluno">Aluno</label>
+                    <input name="nomeAluno" placeholder="nome do Aluno"/>
+                    </div>
+                    <div>
+                    <label for="DataNascimento">DataDeNascimento</label>
+                    <input name="DataNascimento" placeholder="DataNascimento"/>
+                </div>
+               <div>
+                    <label for="urlImagem">Foto</label>
+                    <input name="urlImagem" placeholder="url da imagem"/>
+                                   </div>
+                                   
+                <div>
+                    <label for="CPF">CPF(apenas números)</label>
+                    <input name="CPF" placeholder="CPF"/>
+                                   </div>
+                                    <div>
+                    <label for="NumMatricula">Matricula</label>
+                    <input name="NumMatricula" placeholder="NumMatricula"/>
+                                   </div>
+                </div>
+                </div>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </body>
+</html>

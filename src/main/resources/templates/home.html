@@ -1,0 +1,38 @@
+<html><head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">	</head>
+	<body>
+		   <a href="/cadastro/form"><button class="btn btn-outline-primary my-2 my-sm-0">Novo Aluno</button></a>
+		   <a href="/cadastro/deleta"><button class="btn btn-outline-primary my-2 my-sm-0">Apagar Aluno</button></a>
+		   <a href="/cadastro/edit"><button class="btn btn-outline-primary my-2 my-sm-0">Editar Informações</button></a>
+		   
+		   
+</nav>
+		<div class="container"> 
+			<div class="card" th:each="aluno : ${alunos}">
+				<div class="card-header" th:text="${aluno.NomeAluno}">Nome do Aluno</div> 
+				<div class="card-body">
+					<div class="row">
+						<div class="col-12 col-sm-8 mb-3">
+							<div class="row ">
+								<div class="col-md-5">CPF: <span th:text="${aluno.CPF}">200,99</span></div>
+								<div class="col-md-6">Data de Nascimento: <span th:text="${aluno.DataNascimento}">10/02/2020</span></div>
+								
+							</div>
+							
+							<div> Matricula <span th:text="${aluno.NumMatricula}">10/02/2020</span></div>
+							
+							
+							
+						</div>
+						<div class="col-12 col-sm-4">
+							<div>
+								<img class="img-thumbnail" th:src="${aluno.Foto}" src="" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>
